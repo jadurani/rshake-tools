@@ -12,7 +12,8 @@ from obspy.core import read
 
 def main():
     # TODO: get configs from configs file
-    IP = "rs.local"#"192.168.1.21" # rshake IP
+    # IP = "rs.local"#"192.168.1.21" # rshake IP
+    IP = "192.168.1.60"
     DUR = 30 # duration in sec (for plotting and other processes)
     STA_SEC = 2 # length of data in seconds to get short-term-ave
     LTA_SEC = 15 # length of data in seconds to get long-term-ave
@@ -93,7 +94,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
-
