@@ -173,7 +173,7 @@ def get_low_corner_freq(tr, window_size, low_power_thresh = 0.0001, noise_type="
 
     return lowcut, snr
 
-def convert_counts_to_metric_trace(tr, metric_units, event_onset=None, limit=True, plot=False, plot_info=None, use_mag=False):
+def convert_counts_to_metric_trace(tr, metric_units, event_onset=None, limit=True, plot=True, plot_info=None, use_mag=False):
     if tr.stats.units == "COUNTS":
         tr = tr.copy()
         freq = tr.stats.sampling_rate
@@ -696,6 +696,3 @@ def compare(prism_files, mseed_file, network, station, channel, plot= True):
     mean_abs_errors = [acc_ae_mean, vel_ae_mean, dis_ae_mean]
 
     return (event_info, processing_info, instrument_info, prism_peaks, obspy_peaks, mean_abs_errors)
-
-
-
